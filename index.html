@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NexusAI | Custom Academic AIs Tailored For You</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .glow-bg {
+      background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.18) 0%, rgba(15, 23, 42, 0) 70%);
+    }
+    .grid-pattern {
+      background-size: 40px 40px;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-[#090D16] text-slate-100 antialiased selection:bg-indigo-500 selection:text-white relative min-h-screen">
+
+  <!-- Ambient Glow & Grid -->
+  <div class="absolute inset-0 glow-bg pointer-events-none"></div>
+  <div class="absolute inset-0 grid-pattern pointer-events-none opacity-60"></div>
+
+  <!-- Navigation -->
+  <nav class="relative z-50 border-b border-slate-800/80 backdrop-blur-xl bg-[#090D16]/70 sticky top-0">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center font-black text-white shadow-lg shadow-indigo-500/25">
+          <i data-lucide="sparkles" class="w-5 h-5 text-white"></i>
+        </div>
+        <div>
+          <span class="font-extrabold text-lg tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">NexusAI</span>
+          <span class="hidden sm:inline-block text-[11px] font-semibold text-indigo-400 uppercase tracking-widest ml-2 px-2 py-0.5 rounded-full bg-indigo-500/10 border border-indigo-500/20">For Students</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="#packages" class="text-sm font-medium text-slate-300 hover:text-white transition hidden md:block">Packages</a>
+        <a href="#faq" class="text-sm font-medium text-slate-300 hover:text-white transition hidden md:block">FAQ</a>
+        <a href="#order" class="text-sm font-semibold bg-white text-slate-950 hover:bg-slate-200 px-5 py-2.5 rounded-xl transition shadow-sm hover:scale-[1.02] active:scale-[0.98]">
+          Order Your AI
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative z-10 max-w-5xl mx-auto px-6 pt-24 pb-20 text-center">
+    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-indigo-500/30 bg-indigo-950/40 text-indigo-300 text-xs font-semibold mb-8 backdrop-blur shadow-inner">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+      </span>
+      Accepting Orders for Final Exams & Projects
+    </div>
+
+    <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-[1.1] mb-8">
+      Your courses are unique.<br />
+      <span class="bg-gradient-to-r from-indigo-400 via-purple-300 to-pink-400 bg-clip-text text-transparent">
+        Your AI tutor should be too.
+      </span>
+    </h1>
+
+    <p class="text-slate-400 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
+      Give us your lecture slides, syllabus, and assignment criteria. We build a personalized, fine-tuned AI model delivered straight to your browser or phone within 24 hours.
+    </p>
+
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a href="#order" class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold bg-indigo-600 hover:bg-indigo-500 text-white shadow-xl shadow-indigo-600/30 transition hover:-translate-y-0.5 active:translate-y-0 text-base flex items-center justify-center gap-2">
+        <span>Build My Custom AI</span>
+        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </a>
+      <a href="#how-it-works" class="w-full sm:w-auto px-8 py-4 rounded-xl font-semibold border border-slate-800 bg-slate-900/60 hover:bg-slate-800/80 text-slate-300 transition text-base">
+        How It Works
+      </a>
+    </div>
+
+    <!-- Stats -->
+    <div class="mt-16 pt-10 border-t border-slate-800/60 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl mx-auto">
+      <div>
+        <div class="text-2xl sm:text-3xl font-extrabold text-white">24h</div>
+        <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold mt-1">Delivery Time</div>
+      </div>
+      <div>
+        <div class="text-2xl sm:text-3xl font-extrabold text-white">100%</div>
+        <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold mt-1">Syllabus-Aligned</div>
+      </div>
+      <div>
+        <div class="text-2xl sm:text-3xl font-extrabold text-white">Private</div>
+        <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold mt-1">Your Notes Protected</div>
+      </div>
+      <div>
+        <div class="text-2xl sm:text-3xl font-extrabold text-white">Free Edits</div>
+        <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold mt-1">48-Hr Revisions</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Packages -->
+  <section id="packages" class="relative z-10 max-w-6xl mx-auto px-6 py-20">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Choose Your Build Type</h2>
+      <p class="text-slate-400 text-sm sm:text-base">Click a package to instantly pre-fill the order form below.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      
+      <!-- Card 1 -->
+      <div onclick="selectPackage('Exam Prep & Quizzer Bot')" class="cursor-pointer group p-8 rounded-3xl border border-slate-800 bg-slate-900/40 hover:bg-slate-900/90 hover:border-indigo-500/50 transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 mb-6 group-hover:scale-110 transition">
+            <i data-lucide="book-open-check" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Exam Prep & Quizzer</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Trained directly on your PDF slides, test patterns, and textbook chapters. It creates practice quizzes and pinpoints conceptual mistakes.
+          </p>
+        </div>
+        <div class="pt-6 border-t border-slate-800/60 flex items-center justify-between">
+          <span class="text-xs font-semibold text-indigo-400">Select Package</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-indigo-400 group-hover:translate-x-1 transition"></i>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div onclick="selectPackage('Coding & Lab Debugger')" class="cursor-pointer group p-8 rounded-3xl border border-indigo-500/40 bg-gradient-to-b from-indigo-950/20 to-slate-900/80 hover:border-indigo-400 transition-all duration-300 flex flex-col justify-between relative shadow-lg shadow-indigo-950/50">
+        <span class="absolute -top-3 right-6 px-3 py-1 bg-gradient-to-r from-indigo-500 to-purple-500 text-[11px] font-bold rounded-full text-white uppercase tracking-wider">Most Popular</span>
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 mb-6 group-hover:scale-110 transition">
+            <i data-lucide="code-xml" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Coding & Lab Debugger</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Tuned to explain code step-by-step instead of simply dumping answers. Handles Python, C++, Java, web stacks, and data structures.
+          </p>
+        </div>
+        <div class="pt-6 border-t border-slate-800/60 flex items-center justify-between">
+          <span class="text-xs font-semibold text-purple-400">Select Package</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-purple-400 group-hover:translate-x-1 transition"></i>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div onclick="selectPackage('Thesis & Research Synthesizer')" class="cursor-pointer group p-8 rounded-3xl border border-slate-800 bg-slate-900/40 hover:bg-slate-900/90 hover:border-indigo-500/50 transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <div class="w-12 h-12 rounded-2xl bg-pink-500/10 border border-pink-500/20 flex items-center justify-center text-pink-400 mb-6 group-hover:scale-110 transition">
+            <i data-lucide="file-search" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2">Thesis & Research Bot</h3>
+          <p class="text-slate-400 text-sm leading-relaxed mb-6">
+            Extracts insights across dozens of research papers, builds literature matrices, and formats strict citations in APA, IEEE, or MLA.
+          </p>
+        </div>
+        <div class="pt-6 border-t border-slate-800/60 flex items-center justify-between">
+          <span class="text-xs font-semibold text-pink-400">Select Package</span>
+          <i data-lucide="chevron-right" class="w-4 h-4 text-pink-400 group-hover:translate-x-1 transition"></i>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="how-it-works" class="relative z-10 max-w-5xl mx-auto px-6 py-16">
+    <div class="p-8 sm:p-12 rounded-3xl border border-slate-800 bg-slate-900/40 backdrop-blur-sm">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white text-center mb-10">How It Works</h2>
+      <div class="grid sm:grid-cols-3 gap-8">
+        <div>
+          <div class="text-indigo-400 font-mono text-sm font-bold mb-2">01 / SUBMIT</div>
+          <h4 class="font-bold text-base text-white mb-2">Order & Link Materials</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">Provide your assignment specifications, curriculum outline, or a Google Drive folder of notes.</p>
+        </div>
+        <div>
+          <div class="text-purple-400 font-mono text-sm font-bold mb-2">02 / WE BUILD</div>
+          <h4 class="font-bold text-base text-white mb-2">Prompt Engineering & RAG</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">We construct system personas, index your documents, and calibrate accuracy to remove hallucinations.</p>
+        </div>
+        <div>
+          <div class="text-pink-400 font-mono text-sm font-bold mb-2">03 / DELIVER</div>
+          <h4 class="font-bold text-base text-white mb-2">Instant Bot Access</h4>
+          <p class="text-xs text-slate-400 leading-relaxed">You receive a private direct link (Web app, Custom GPT, or Telegram bot) ready for immediate use.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Form Section -->
+  <section id="order" class="relative z-10 max-w-3xl mx-auto px-6 py-20">
+    <div class="bg-slate-900/90 border border-slate-800 rounded-3xl p-8 sm:p-12 shadow-2xl backdrop-blur-xl">
+      <div class="mb-8 text-center">
+        <h2 class="text-3xl font-extrabold text-white tracking-tight mb-2">Commission Your AI</h2>
+        <p class="text-sm text-slate-400">Fill in the fields below. We will reach out on your contact handle within a couple of hours.</p>
+      </div>
+
+      <!-- FORM -->
+      <form id="ai-order-form" https://formspree.io/f/xpppklrq" method="POST" class="space-y-6">
+        
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Student Name *</label>
+            <input type="text" name="name" required placeholder="e.g. Maya Chen" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Email Address *</label>
+            <input type="email" name="email" required placeholder="maya@student.edu" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition" />
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Contact Platform (WhatsApp / Discord) *</label>
+            <input type="text" name="contact_handle" required placeholder="e.g. WhatsApp: +1... or Discord: @user" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Type of AI *</label>
+            <select id="package-select" name="ai_type" class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3.5 text-sm text-white focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition">
+              <option value="Exam Prep & Quizzer Bot">Exam Prep & Quizzer Bot</option>
+              <option value="Coding & Lab Debugger">Coding & Lab Debugger</option>
+              <option value="Thesis & Research Synthesizer">Thesis & Research Bot</option>
+              <option value="Personalized Math/Physics Solver">Math / Physics Problem Solver</option>
+              <option value="Telegram/Discord Study Assistant">Telegram / Discord Bot</option>
+              <option value="Other Custom Solution">Other (Describe below)</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Where do you want to access it? *</label>
+          <div class="grid grid-cols-3 gap-3">
+            <label class="flex items-center gap-2 p-3 bg-slate-950/50 border border-slate-800 rounded-xl cursor-pointer hover:border-slate-700 transition">
+              <input type="radio" name="delivery_format" value="Web Link (Direct URL)" checked class="text-indigo-600 focus:ring-0">
+              <span class="text-xs text-slate-300">Web App Link</span>
+            </label>
+            <label class="flex items-center gap-2 p-3 bg-slate-950/50 border border-slate-800 rounded-xl cursor-pointer hover:border-slate-700 transition">
+              <input type="radio" name="delivery_format" value="Custom GPT (ChatGPT Plus)" class="text-indigo-600 focus:ring-0">
+              <span class="text-xs text-slate-300">Custom GPT</span>
+            </label>
+            <label class="flex items-center gap-2 p-3 bg-slate-950/50 border border-slate-800 rounded-xl cursor-pointer hover:border-slate-700 transition">
+              <input type="radio" name="delivery_format" value="Telegram/Discord Bot" class="text-indigo-600 focus:ring-0">
+              <span class="text-xs text-slate-300">Telegram Bot</span>
+            </label>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Instructions & Requirements *</label>
+          <textarea name="description" rows="4" required placeholder="Tell us what this bot needs to know, its tone (e.g. strict tutor, simplified analogies), and any particular requirements..." class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition"></textarea>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Google Drive / OneDrive Link to Study Files (Optional)</label>
+          <input type="url" name="study_materials_url" placeholder="https://drive.google.com/drive/folders/..." class="w-full bg-slate-950/80 border border-slate-800 rounded-xl px-4 py-3.5 text-sm text-white placeholder-slate-600 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition" />
+          <p class="text-[11px] text-slate-500 mt-1">Set link permissions to "Anyone with the link can view".</p>
+        </div>
+
+        <button type="submit" id="submit-btn" class="w-full py-4 bg-gradient-to-r from-indigo-600 via-indigo-500 to-purple-600 hover:opacity-95 text-white font-bold rounded-xl shadow-lg shadow-indigo-600/30 transition text-sm flex items-center justify-center gap-2">
+          <span>Send Order Request</span>
+          <i data-lucide="send" class="w-4 h-4"></i>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion -->
+  <section id="faq" class="relative z-10 max-w-3xl mx-auto px-6 py-16">
+    <h2 class="text-2xl sm:text-3xl font-extrabold text-white text-center mb-8">Frequently Asked Questions</h2>
+    <div class="space-y-4">
+
+      <details class="group p-5 bg-slate-900/60 border border-slate-800 rounded-2xl transition [&_summary::-webkit-details-marker]:hidden">
+        <summary class="flex items-center justify-between cursor-pointer font-semibold text-slate-200">
+          <span>Do I need a paid ChatGPT Plus subscription?</span>
+          <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition"></i>
+        </summary>
+        <p class="mt-4 text-sm text-slate-400 leading-relaxed">
+          No! While we can build a Custom GPT if you have Plus, we can also host your custom bot as a standalone web URL that works on any browser without any paid subscriptions.
+        </p>
+      </details>
+
+      <details class="group p-5 bg-slate-900/60 border border-slate-800 rounded-2xl transition [&_summary::-webkit-details-marker]:hidden">
+        <summary class="flex items-center justify-between cursor-pointer font-semibold text-slate-200">
+          <span>How fast do I get my bot?</span>
+          <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition"></i>
+        </summary>
+        <p class="mt-4 text-sm text-slate-400 leading-relaxed">
+          Orders are typically delivered within 24 to 48 hours. If you have an imminent exam tomorrow, let us know in the notes and we will prioritize your build.
+        </p>
+      </details>
+
+      <details class="group p-5 bg-slate-900/60 border border-slate-800 rounded-2xl transition [&_summary::-webkit-details-marker]:hidden">
+        <summary class="flex items-center justify-between cursor-pointer font-semibold text-slate-200">
+          <span>Is my data and course material private?</span>
+          <i data-lucide="chevron-down" class="w-5 h-5 text-slate-400 group-open:rotate-180 transition"></i>
+        </summary>
+        <p class="mt-4 text-sm text-slate-400 leading-relaxed">
+          Yes. Your study materials and notes are used strictly to create your personal knowledge index and are never shared or made public.
+        </p>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="relative z-10 border-t border-slate-900 py-10 text-center text-xs text-slate-500">
+    <div class="flex items-center justify-center gap-2 mb-2 font-semibold text-slate-400">
+      <i data-lucide="sparkles" class="w-4 h-4 text-indigo-400"></i> NexusAI
+    </div>
+    <p>© <span id="year"></span> NexusAI. Custom study tools built for students.</p>
+  </footer>
+
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Auto set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Auto-select package from cards
+    function selectPackage(packageName) {
+      const select = document.getElementById('package-select');
+      select.value = packageName;
+      
+      // Smooth scroll to order section
+      document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+
+      // Visual flash effect on select dropdown
+      select.classList.add('ring-2', 'ring-indigo-400');
+      setTimeout(() => {
+        select.classList.remove('ring-2', 'ring-indigo-400');
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
